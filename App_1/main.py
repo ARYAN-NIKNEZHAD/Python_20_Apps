@@ -6,18 +6,18 @@ while True:
     match user_action:
         case "add":
             todo = input("Enter a todo: ") + "\n"
-            file = open("todos", "r")
+            file = open("files/todos", "r")
             todos = file.readlines()
             file.close()
 
             todos.append(todo)
 
-            file = open("todos", "w")
+            file = open("files/todos", "w")
             file.writelines(todos)
             file.close()
 
         case "show":
-            file = open("todos", "r")
+            file = open("files/todos", "r")
             todos = file.readlines()
             file.close()
 
