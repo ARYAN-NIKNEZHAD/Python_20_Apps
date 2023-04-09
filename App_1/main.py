@@ -1,8 +1,7 @@
-
 while True:
     user_action = input("Type add, show, edit, complete or exit: ")
     user_action = user_action.strip()
-    
+
     match user_action:
         case "add":
             todo = input("Enter a todo: ") + "\n"
@@ -21,7 +20,13 @@ while True:
             todos = file.readlines()
             file.close()
 
-            for index, item in enumerate(todos):
+            new_todos = []
+
+            for item in todos:
+                new_item = item.strip("\n")
+                new_todos.append(new_item)
+
+            for index, item in enumerate(new_todos):
                 item = item.title()
                 print(f"{index + 1} - {item}")
         case "edit":
