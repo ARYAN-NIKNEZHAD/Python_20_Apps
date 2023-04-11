@@ -1,5 +1,5 @@
-def get_todos():
-    with open("files/todos", "r") as file_local:
+def get_todos(file_path):
+    with open(file_path, "r") as file_local:
         todos_local = file_local.readlines()
     return todos_local
 
@@ -11,7 +11,7 @@ while True:
     if user_action.startswith("add"):
         todo = user_action[4:]
 
-        todos = get_todos()
+        todos = get_todos("files/todos")
 
         todos.append(todo + "\n")
 
@@ -20,7 +20,7 @@ while True:
 
     elif user_action.startswith("show"):
 
-        todos = get_todos()
+        todos = get_todos("files/todos")
 
         for index, item in enumerate(todos):
             item = item.strip("\n")
@@ -31,7 +31,7 @@ while True:
             number = int(user_action[5:])
             number = number - 1
 
-            todos = get_todos()
+            todos = get_todos("files/todos")
             new_todo = input("Enter new todo: ")
 
             todos[number] = new_todo + "\n"
@@ -45,7 +45,7 @@ while True:
         try:
             number = int(user_action[9:])
 
-            todos = get_todos()
+            todos = get_todos("files/path")
 
             index = number - 1
             todo_to_remove = todos[index].strip("\n")
