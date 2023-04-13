@@ -21,6 +21,7 @@ while True:
             new_todo = values["todo"] + "\n"
             todos.append(new_todo)
             functions.write_todos(todos)
+            window["todos"].update(values=todos)
         case "Edit":
             todo_to_edit = values["todos"][0]
             new_todo = values["todo"]
