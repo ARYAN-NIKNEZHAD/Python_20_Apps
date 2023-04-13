@@ -1,4 +1,4 @@
-import  functions
+import functions
 import PySimpleGUI as Psg
 
 label = Psg.Text("Type in a to-do")
@@ -6,7 +6,7 @@ input_box = Psg.InputText(tooltip="Enter todo", key="todo")
 add_button = Psg.Button("Add")
 
 list_box = Psg.Listbox(values=functions.get_todos(), key="todos",
-                       enable_events=True, size=[45, 10])
+                       enable_events=True, size=(45, 10))
 edit_button = Psg.Button("Edit")
 window = Psg.Window("My To-do App",
                     layout=[[label], [input_box, add_button], [list_box, edit_button]],
@@ -37,5 +37,3 @@ while True:
             break
 
 window.close()
-
-
