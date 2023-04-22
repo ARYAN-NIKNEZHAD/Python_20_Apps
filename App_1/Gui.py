@@ -1,6 +1,11 @@
 import functions
 import PySimpleGUI as Psg
 import time
+import os
+
+if not os.path.exists("files/todos"):
+    with open("files/todos", "w") as file:
+        pass
 
 
 Psg.theme("Black")
