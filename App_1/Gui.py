@@ -7,14 +7,12 @@ Psg.theme("Black")
 clock = Psg.Text("", key="clock")
 label = Psg.Text("Type in a to-do")
 input_box = Psg.InputText(tooltip="Enter todo", key="todo")
-add_button = Psg.Button(size=2, image_source="files/add.png", mouseover_colors="LightBlue2",
-                        tooltip="Add Todo", key="Add")
+add_button = Psg.Button("Add", size=10)
 
 list_box = Psg.Listbox(values=functions.get_todos(), key="todos",
                        enable_events=True, size=(45, 10))
 edit_button = Psg.Button("Edit")
-complete_button = Psg.Button(size=2, image_source="files/complete.png", mouseover_colors="LightBlue2",
-                             tooltip="Complete Todo", key="Complete")
+complete_button = Psg.Button("Complete")
 exit_button = Psg.Button("Exit")
 window = Psg.Window("My To-do App",
                     layout=[[clock],
