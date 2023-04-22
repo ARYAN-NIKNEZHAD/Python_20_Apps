@@ -7,7 +7,7 @@ Psg.theme("Black")
 clock = Psg.Text("", key="clock")
 label = Psg.Text("Type in a to-do")
 input_box = Psg.InputText(tooltip="Enter todo", key="todo")
-add_button = Psg.Button("Add")
+add_button = Psg.Button("Add", size=10)
 
 list_box = Psg.Listbox(values=functions.get_todos(), key="todos",
                        enable_events=True, size=(45, 10))
