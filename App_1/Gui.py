@@ -3,8 +3,8 @@ import PySimpleGUI as Psg
 import time
 import os
 
-if not os.path.exists("files/todos"):
-    with open("files/todos", "w") as file:
+if not os.path.exists("todos"):
+    with open("todos", "w") as file:
         pass
 
 
